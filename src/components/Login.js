@@ -5,7 +5,7 @@ function Login(){
     let [username,setName]=useState("");
     let [password,setPassword]=useState("");
     function handleFetch(){
-        fetch('/api/login', {
+        fetch('https://todos-api-0168322868fd.herokuapp.com/api/login', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json', // Specify the content type
