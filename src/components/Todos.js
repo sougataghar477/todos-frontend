@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 function Todos({data}) {
   useEffect(()=>{
-    fetch("https://todos-api-0168322868fd.herokuapp.com/api/login").then(a => a.json()).then(a =>{console.log(a);setTasks(a.msg.tasks)})
+    fetch("/api/login").then(a => a.json()).then(a =>{console.log(a);setTasks(a.msg.tasks)})
   },[])
 const [tasks,setTasks]=useState([]);
   const [newTask, setNewTask] = useState(""); // State for the new task
@@ -24,7 +24,7 @@ const [tasks,setTasks]=useState([]);
  {data?.msg!=="You are not authorized" && <button
         className="bg-black p-4 text-white border-black border-2"
         onClick={function(){
-          fetch("https://todos-api-0168322868fd.herokuapp.com/api/addTask",{
+          fetch("/api/addTask",{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json' // Specify the content type

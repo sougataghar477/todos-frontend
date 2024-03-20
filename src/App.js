@@ -8,7 +8,7 @@ function App() {
    
   let [data,setData]=useState(undefined);
   useEffect(()=>{
-    fetch("https://todos-api-0168322868fd.herokuapp.com/api/login").then(a => a.json()).then(a =>{setData(a)})
+    fetch("/api/login").then(a => a.json()).then(a =>{setData(a)})
   },[])
   return (
     <div className="App">

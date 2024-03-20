@@ -2,7 +2,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 function Todo({task,setTasks}){
 return <div className="flex gap-4 items-center task-card w-max p-6 my-8">
     <h1 className="text-2xl">{task}</h1>
-    <RiDeleteBin5Line   onClick={()=>fetch("https://todos-api-0168322868fd.herokuapp.com/api/deleteTask",{
+    <RiDeleteBin5Line   onClick={()=>fetch("/api/deleteTask",{
         method:'POST',
         headers: {
             'Content-Type': 'application/json' // Specify the content type
