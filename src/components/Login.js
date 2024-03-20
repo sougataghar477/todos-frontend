@@ -5,7 +5,7 @@ function Login(){
     let [username,setName]=useState("");
     let [password,setPassword]=useState("");
     function handleFetch(){
-        fetch('/api/login', {
+        fetch('https://todos-api2.onrender.com/api/login', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json', // Specify the content type

@@ -3,7 +3,7 @@ function Register(){
     let [username,setName]=useState("");
     let [password,setPassword]=useState("");
     function handleFetch(){
-        fetch('/api/register', {
+        fetch('https://todos-api2.onrender.com/api/register', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json', // Specify the content type
