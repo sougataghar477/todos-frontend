@@ -8,7 +8,7 @@ function App() {
    
   let [data,setData]=useState(undefined);
   useEffect(()=>{
-    fetch("/api/login").then(a => a.json()).then(a =>{setData(a)})
+    fetch("https://todos-api2.onrender.com/api/login").then(a => a.json()).then(a =>{setData(a)})
   },[])
   return (
     <div className="App">
